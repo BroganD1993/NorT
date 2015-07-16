@@ -26,13 +26,21 @@ function Player(name) {
     }
 
     function changeDirection(direction) {
-        that.dir = direction;
+        that.direction = direction;
     }
 
     function updatePlayer() {
-        if(direction == "right") head_x++;
-        else if(direction == "left") head_x--;
-        else if(direction == "up") head_y--;
-        else if(direction == "down") head_y++;
+        if(that.direction == "right") {
+
+        }
+        else if(that.direction == "left") {
+
+        }
+        else if(that.direction == "up") {
+
+        }
+        else if(that.direction == "down") {
+
+        }
     }
 }
