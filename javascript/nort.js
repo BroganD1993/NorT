@@ -1,5 +1,4 @@
-var player_one_dir = "down";
-var player_two_dir = "down";
+var speed = 15;
 
 function init() {
     menu.style.zIndex = "-1";
@@ -8,7 +7,5 @@ function init() {
 }
 
 function game() {
-    var speed = 25;
-    if(speed <= 45) speed ++;
-    setInterval(draw, 1000/speed);
+    setInterval(update, 1000/speed);
 }

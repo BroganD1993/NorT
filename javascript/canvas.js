@@ -17,7 +17,12 @@ function paintCanvas() {
 function draw() {
     paintCanvas();
     player_one.init(5);
-    player_two.init((width/20) - 5);
+    player_two.init((width/10) - 5);
     player_one.paint();
     player_two.paint();
+}
+
+function update() {
+    player_one.update();
+    player_two.update();
 }
