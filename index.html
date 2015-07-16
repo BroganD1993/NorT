@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Nort |  A two player, in browser Tron game</title>
+        <meta name='author' content="Darren Brogan">
+        <meta name="keywords" content="tron, nort, game, html5, canvas">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+        <link rel="stylesheet" href="stylesheets/reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="stylesheets/canvas.css" type="text/css" media="all">
+
+    </head>
+<body>
+    <div id="player_controls_banner">
+        <div class="player_control">
+            <div class="button top">W</div><br/>
+            <div class="button">A</div>
+            <div class="button">S</div>
+            <div class="button">D</div>
+        </div>
+        <div class="player_control">
+            <div class="button top">I</div><br/>
+            <div class="button">J</div>
+            <div class="button">K</div>
+            <div class="button">L</div>
+        </div>
+    </div>
+    <canvas id="nort_map"></canvas>
+
+    <div id="menu">
+        <h1 id="nort">Nort</h1>
+        <a href="javascript: void(0)" id="start" onclick="init()">Start</a>
+        <p id="loading">Loading...</p>
+    </div>
+
+
+    <script src="javascript/player.js"></script>
+    <script src="javascript/canvas.js"></script>
+    <script src="javascript/keys.js"></script>
+    <script src="javascript/menu.js"></script>
+    <script src="javascript/nort.js"></script>
+</body>
