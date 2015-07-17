@@ -16,7 +16,7 @@ window.onload = function loadMusic() {
     this.checkAudio = window.setInterval(
         function(){
             checkReadyState()
-        },200
+        },250
     );
 };
 
