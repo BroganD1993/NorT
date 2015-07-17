@@ -17,9 +17,19 @@
 }
 
 
-h1, p, a {
+#heading, p, a {
     color: #333333;
-    font: 6em "Press Start 2P", cursive;
+    font: 8em "Press Start 2P", cursive;
+}
+
+#n {
+    display: inline;
+    color: #CC00FF;
+}
+
+#t {
+    display: inline;
+    color: #00CCFF;
 }
 
 #info {
@@ -30,7 +40,7 @@ a{
     font-size : 3em;
 }
 
-h1 {
+#heading {
     margin-top: 5%;
     margin-bottom: 10%;
 }

@@ -8,6 +8,11 @@ function init() {
 }
 
 function game() {
+    this.backgroundAudio = new Audio("music/digital_bones.mp3");
+    this.backgroundAudio.loop = true;
+    this.backgroundAudio.volume = .25;
+    this.backgroundAudio.load();
+    this.backgroundAudio.play();
     intervalID = setInterval(update, 1000/speed);
 }
 
