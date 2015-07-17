@@ -1,6 +1,7 @@
 function showMenu() {
     menu = document.getElementById("menu");
     game_over_menu = document.getElementById("game_over_menu");
+    loading = document.getElementById("bar");
     reset_keys();
 }
 
@@ -23,5 +24,8 @@ function updateKeys(id, colour, old_id) {
     colour_key(id, colour);
     colour_key(old_id, "#777");
 }
+
+var loading_index = 0;
+var loading_style = ["loading", "loading.", "loading..", "loading..."];
 
 showMenu();

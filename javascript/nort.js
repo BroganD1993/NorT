@@ -8,12 +8,25 @@ function init() {
     game();
 }
 
-function playMusic() {
+window.onload = function loadMusic() {
     this.backgroundAudio = new Audio("music/digital_bones.mp3");
     this.backgroundAudio.loop = true;
     this.backgroundAudio.volume = .25;
     this.backgroundAudio.load();
+    loading.style.zIndex = "1";
+    this.checkAudio = window.setInterval(
+        function(){
+            checkReadyState()
+        },1000
+    );
+};
+
+function playMusic() {
     this.backgroundAudio.play();
+}
+
+function stopMusic() {
+    this.backgroundAudio.pause();
 }
 
 function game() {
@@ -41,4 +54,14 @@ function restart() {
     reset();
     draw();
     game();
+}
+
+function checkReadyState() {
+    loading.innerHTML = loading_style[loading_index++ % loading_style.length];
+    if (this.backgroundAudio.readyState === 4) {
+        window.clearInterval(this.checkAudio);
+        loading.style.zIndex = "-1";
+        menu.style.zIndex = "1";
+
+    }
 }

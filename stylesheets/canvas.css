@@ -2,7 +2,7 @@
 
 #menu {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: 25%;
     width: 90%;
     text-align: center;
@@ -16,7 +16,15 @@
     text-align: center;
 }
 
-#heading, p, a {
+#bar {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    width: 90%;
+    text-align: center;
+}
+
+#heading, p, a, #loading {
     color: #333333;
     font: 8em "Press Start 2P", cursive;
 }
@@ -29,6 +37,11 @@
 #t {
     display: inline;
     color: #00CCFF;
+}
+
+#loading {
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 #info {
