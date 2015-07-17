@@ -21,8 +21,8 @@ function reset_keys() {
 }
 
 function updateKeys(id, colour, old_id) {
-    colour_key(id, colour);
     colour_key(old_id, "#777");
+    colour_key(id, colour);
 }
 
 var loading_index = 0;
