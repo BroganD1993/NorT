@@ -4,15 +4,19 @@ var intervalID = 0;
 function init() {
     menu.style.zIndex = "-1";
     draw();
+    playMusic();
     game();
 }
 
-function game() {
+function playMusic() {
     this.backgroundAudio = new Audio("music/digital_bones.mp3");
     this.backgroundAudio.loop = true;
     this.backgroundAudio.volume = .25;
     this.backgroundAudio.load();
     this.backgroundAudio.play();
+}
+
+function game() {
     intervalID = setInterval(update, 1000/speed);
 }
 
@@ -34,6 +38,7 @@ function printVictor(victor) {
 
 function restart() {
     game_over_menu.style.zIndex = "-1";
+    reset();
     draw();
     game();
 }

@@ -12,8 +12,13 @@ var canvas_y_width = height / player_size;
 var player_one = new Player("Player One");
 var player_two = new Player("Player Two");
 
-player_one.init(5, "#CC00FF");
-player_two.init(canvas_x_width - 5, "#00CCFF");
+player_one.init(15, "#CC00FF");
+player_two.init(canvas_x_width - 15, "#00CCFF");
+
+function reset() {
+    player_one.reset(15);
+    player_two.reset(canvas_x_width - 15);
+}
 
 function paintCanvas() {
     ctx.fillStyle = "white";

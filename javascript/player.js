@@ -4,7 +4,7 @@ function Player(name) {
     this.name = name;
     this.last_x = 0;
     this.last_y = 0;
-    this.trail = []
+    this.trail = [];
     this.last_key = "s";
     this.colour = "#777";
     this.direction = "down";
@@ -12,7 +12,7 @@ function Player(name) {
     var that = this;
     this.init = function(start_x, colour) {
         that.colour = colour;
-        var start_y = 5;
+        var start_y = 15;
         var start_size = 10;
         for(var i = start_y; i < start_size - 1; i++) {
             that.trail.push({x: start_x, y: i});
@@ -54,9 +54,14 @@ function Player(name) {
         that.paint();
     };
 
-    this.reset = function() {
-        that.last_x = 0;
-        that.last_y = 0;
+    this.reset = function(start_x) {
+        var start_y = 15;
+        var start_size = 10;
+        for(var i = start_y; i < start_size - 1; i++) {
+            that.trail.push({x: start_x, y: i});
+        }
+        that.last_x = start_x;
+        that.last_y = start_size - 2;
         that.trail = [];
         that.direction = "down";
     }
