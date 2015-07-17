@@ -6,8 +6,8 @@ body {
 }
 
 canvas {
-    width: 90%;
-    height: 85%;
+    width: 95%;
+    height: 750px;
     display: block;
     margin: auto;
     background: #fff;
