@@ -1,7 +1,7 @@
 function showMenu() {
     menu = document.getElementById("menu");
     game_over_menu = document.getElementById("game_over_menu");
-    loading = document.getElementById("bar");
+    bar = document.getElementById("bar");
     reset_keys();
 }
 
