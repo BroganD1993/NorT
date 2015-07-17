@@ -1,14 +1,17 @@
-var player_size = 10;
+var player_size = 5;
 
 function Player(name) {
     this.name = name;
     this.last_x = 0;
     this.last_y = 0;
-    this.trail = [];
+    this.trail = []
+    this.last_key = "s";
+    this.colour = "#777";
     this.direction = "down";
 
     var that = this;
-    this.init = function(start_x) {
+    this.init = function(start_x, colour) {
+        that.colour = colour;
         var start_y = 5;
         var start_size = 10;
         for(var i = start_y; i < start_size - 1; i++) {
@@ -21,7 +24,7 @@ function Player(name) {
     this.paint = function() {
         for(var i = 0; i < that.trail.length; i++) {
             var square = that.trail[i];
-            ctx.fillStyle = "black";
+            ctx.fillStyle = that.colour;
             ctx.fillRect(square.x*player_size, square.y*player_size, player_size, player_size);
         }
     };
