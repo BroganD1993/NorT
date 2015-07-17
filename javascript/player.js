@@ -1,44 +1,40 @@
+var player_size = 10;
+
 function Player(name) {
     this.name = name;
-    this.init = initPlayer;
-    this.paint = paintPlayer;
-    this.update = updatePlayer;
-    this.changeDirection = changeDirection;
-    this.dir = getDirection;
     this.last_x = 0;
     this.last_y = 0;
-    this.player = [];
+    this.trail = [];
     this.direction = "down";
 
     var that = this;
-    function initPlayer(start_x) {
+    this.init = function(start_x) {
         var start_y = 5;
         var start_size = 10;
         for(var i = start_y; i < start_size - 1; i++) {
-            that.player.push({x: start_x, y: i});
+            that.trail.push({x: start_x, y: i});
         }
         that.last_x = start_x;
         that.last_y = start_size - 2;
-    }
+    };
 
-    function paintPlayer() {
-        var size = 10;
-        for(var i = 0; i < that.player.length; i++) {
-            var square = that.player[i];
+    this.paint = function() {
+        for(var i = 0; i < that.trail.length; i++) {
+            var square = that.trail[i];
             ctx.fillStyle = "black";
-            ctx.fillRect(square.x*size, square.y*size, size, size);
+            ctx.fillRect(square.x*player_size, square.y*player_size, player_size, player_size);
         }
-    }
+    };
 
-    function changeDirection(direction) {
+    this.changeDirection = function(direction) {
         that.direction = direction;
-    }
+    };
 
-    function getDirection() {
+    this.getDirection = function() {
         return that.direction;
-    }
+    };
 
-    function updatePlayer() {
+    this.update = function() {
         if(that.direction == "right") {
             that.last_x++;
         }
@@ -51,7 +47,14 @@ function Player(name) {
         else if(that.direction == "down") {
             that.last_y++;
         }
-        that.player.push({x: that.last_x, y: that.last_y});
+        that.trail.push({x: that.last_x, y: that.last_y});
         that.paint();
+    };
+
+    this.reset = function() {
+        that.last_x = 0;
+        that.last_y = 0;
+        that.trail = [];
+        that.direction = "down";
     }
 }
