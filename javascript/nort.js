@@ -24,8 +24,12 @@ function playMusic() {
     this.backgroundAudio.play();
 }
 
-function stopMusic() {
-    this.backgroundAudio.pause();
+function toggleMusic() {
+    if(this.backgroundAudio.paused) {
+        this.backgroundAudio.play();
+    } else {
+        this.backgroundAudio.pause();
+    }
 }
 
 function game() {
