@@ -18,4 +18,4 @@ Player one can control their player with theI, J, K & L keys
 
 ## Music
 
-Music is called (Digital Bones)[http://www.newgrounds.com/audio/listen/625694], by Poinl 
+Music is called [Digital Bones](http://www.newgrounds.com/audio/listen/625694), by Poinl 
