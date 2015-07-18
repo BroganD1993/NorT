@@ -8,11 +8,11 @@ Avoid the walls and the other players trail to win.
 
 ## Controls
 
-##### Player One
+#### Player One
 
 Player one can control their player with the W, A, S & D keys
 
-##### Player Two
+#### Player Two
 
 Player one can control their player with theI, J, K & L keys
 
