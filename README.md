@@ -4,7 +4,7 @@
 
 A simple, in browser multiplayer Tron clone. 
 
-Avoid the walls and the other players trail to win.
+Avoid the walls and the other player's trail to win.
 
 ## Controls
 
