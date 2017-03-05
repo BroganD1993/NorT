@@ -14,7 +14,7 @@ Player one can control their player with the W, A, S & D keys
 
 #### Player Two
 
-Player one can control their player with theI, J, K & L keys
+Player one can control their player with the I, J, K & L keys
 
 ## Music
 
