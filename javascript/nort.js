@@ -1,4 +1,4 @@
-var speed = 25;
+var speed = 75;
 var intervalID = 0;
 
 function init() {
