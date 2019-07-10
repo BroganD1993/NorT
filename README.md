@@ -1,6 +1,6 @@
 # NorT
 
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](http://brogand1993.github.io/NorT/)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](http://brogand93.github.io/NorT/)
 
 A simple, in browser multiplayer Tron clone. 
 
